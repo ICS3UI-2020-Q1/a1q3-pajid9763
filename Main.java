@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- *
+ * a program to find the total cost of chromebook parts
  * @author Darian
  */
 public class Main {
