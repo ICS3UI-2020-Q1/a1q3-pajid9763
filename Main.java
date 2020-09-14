@@ -1,6 +1,7 @@
+import java.util.Scanner;
 /**
  *
- * @author 
+ * @author Darian
  */
 public class Main {
 
@@ -9,7 +10,29 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
-    
+  Scanner input = new Scanner(System.in);
+
+  // ask the user how many chromebook chargers
+  System.out.println("How many chromebook chargers?");
+  int charger = input.nextInt();
+  // ask the user how many motherboards
+  System.out.println("How many motherboards?");
+  int motherboard = input.nextInt();
+  // ask the user how many mice
+  System.out.println("How many mice?");
+  int mice = input.nextInt();
+
+  // calculate the costs for each part
+  int charger_sum = (charger * (34 + 99/100));
+  int motherboard_sum = (motherboard * (127 + 50/100));
+  int mice_sum = (mice * 18);
+  int total = (charger_sum + motherboard_sum + mice_sum);
+  int tax = (total * 13/100);
+  int final_total = (total + tax);
+
+  // tell the user their total costs
+  System.out.println("Subtotal = " + "$" + total);
+  System.out.println("Taxes = " + "$" + tax);
+  System.out.println("Total = " + "$" + final_total);
   }
 }
